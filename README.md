@@ -9,7 +9,8 @@ The pipeline requires [Nextflow](https://github.com/nextflow-io/nextflow) to run
 
 Here are the highlights of the key requirements to run a CPU+GPU pipeline with containers on Pawsey multiple Slurm clusters:
 
-* hacked version of Nextflow with Slurm multi-cluster support; in this example, `slurm_topaz` executor is used to submit jobs to Topaz;
+* the pipeline is assumed to be run from Zeus;
+* hacked version of Nextflow with Slurm multi-cluster support; in this example, `slurm_topaz` executor is used to submit the GPU jobs to Topaz;
 * process options for GPU tasks: `executor = 'slurm_topaz'`, `queue = 'gpuq'`, `clusterOptions += " --gpus-per-node=1"`;
 * Singularity options: 
   * `runOptions = "-B /group,/scratch --nv"`;
