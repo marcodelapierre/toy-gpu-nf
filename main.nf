@@ -4,7 +4,7 @@ nextflow.enable.dsl = 2
 
 
 process prep {
-  //publishDir '.', saveAs: { filename -> filename+"-${string}" }
+  //publishDir '.', mode: 'copy', saveAs: { filename -> filename+"-${string}" }
 
   input:
   val(string)
@@ -19,7 +19,7 @@ process prep {
 }
 
 process proc_cpu {
-  publishDir '.', saveAs: { filename -> filename+"-${string}" }
+  publishDir '.', mode: 'copy', saveAs: { filename -> filename+"-${string}-cpu" }
 
   input:
   tuple val(string), file('init')
@@ -34,7 +34,7 @@ process proc_cpu {
 }
 
 process proc_gpu {
-  publishDir '.', saveAs: { filename -> filename+"-${string}" }
+  publishDir '.', mode: 'copy', saveAs: { filename -> filename+"-${string}-gpu" }
 
   input:
   tuple val(string), file('init')
@@ -55,7 +55,7 @@ workflow {
 
   prep(input)
 
-  //proc_cpu(prep.out)
+  proc_cpu(prep.out)
   proc_gpu(prep.out)
 
 
