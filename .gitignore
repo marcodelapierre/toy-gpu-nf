@@ -2,3 +2,4 @@
 work/*
 out-*
 slurm-*.out
+extra/nextflow
