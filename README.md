@@ -25,9 +25,9 @@ Key files provided:
 * `nextflow.config`, valid for test runs on Pawsey (uses debug queues)
 * `job.sh` template Slurm script for Zeus at Pawsey
 * `extra/` files:
-  * `install-nextflow-hack-multi-cluster.sh`, a script to build and install hacked multi-cluster Nextflow
+  * `install-nextflow-hack-slurm-multi-cluster.sh`, a script to build and install hacked multi-cluster Nextflow
   * `log.sh`, a helper script to get enhanced logging for completed pipelines
   * `Dockerfile` used to build the toy container in use
 * `src/`: source files for the toy CPU and GPU binaries in use
 * `bin_/`: toy binaries (directory has broken name, to force using binaries from the container)
-* `test-outputs/`: reference test outputs (currently the pipeline only outputs the equivalent of `test-out-a-cpu` and `test-out-a-gpu`)
+* `test-outputs/`: reference test outputs (currently the pipeline only outputs the equivalent of `out-a-cpu` and `out-a-gpu`)
