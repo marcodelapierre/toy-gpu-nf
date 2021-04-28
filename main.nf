@@ -55,7 +55,7 @@ workflow {
 
   prep(input)
 
-  proc_cpu(prep.out)
+  //proc_cpu(prep.out)
   proc_gpu(prep.out)
 
 
