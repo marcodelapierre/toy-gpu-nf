@@ -51,11 +51,11 @@ process proc_gpu {
 
 workflow {
 
-  input = channel.of('a','b','c')
+  input = channel.of('a') // ,'b','c')
 
   prep(input)
 
-  //proc_cpu(prep.out)
+  proc_cpu(prep.out)
   proc_gpu(prep.out)
 
 
