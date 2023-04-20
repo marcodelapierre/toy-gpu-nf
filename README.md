@@ -1,4 +1,4 @@
-## Toy pipeline to test Nextflow with GPUs at Pawsey
+## Toy pipeline to test Nextflow with Nvidia GPUs on Topaz at Pawsey
 
 
 The pipeline requires [Nextflow](https://github.com/nextflow-io/nextflow) to run, with some special requirements:
